@@ -1,0 +1,27 @@
+/* indexページ*/
+#task-name{
+  font-size:18px;
+}
+
+#table-tasks{
+  th{
+    vertical-align:middle;
+  }
+  td{
+    vertical-align:middle;
+  }
+}
+
+/* showページ*/
+#table-task{
+  table-layout: fixed; width:100%;
+  th{
+    vertical-align:middle;
+    text-align:center;
+    white-space:nowrap;
+  }
+  
+  td{
+    word-wrap:break-word;
+  }
+}

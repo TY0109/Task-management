@@ -1,0 +1,25 @@
+/* エラードリルから参照*/
+/* indexページ*/
+#table-users{
+  th{
+    vertical-align:middle;
+  }
+  
+  td{
+    vertical-align:middle;
+  }
+}
+
+.label-user-division {
+  margin-left: 5px;
+}
+
+/*showページ*/
+#table-user{
+  table-layout: fixed; width: 100%;
+  th{
+    text-align:center;
+    vertical-align:middle;
+    white-space:normal;
+  }
+}
