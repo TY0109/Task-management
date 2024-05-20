@@ -1,33 +1,18 @@
 # coding: utf-8
 
-User.create!( 
-  name: "Sample User",
-  email: "sample@email.com",
-  password: "password",
-  password_confirmation: "password",
-  admin:true
-)
-              
-100.times do |n|
-  name= Faker::Name.name
-  email="sample-#{n+1}@email.com"
-  password="password"
-  User.create!(
-    name: name,
-    email: email,
-    password: password,
-    password_confirmation: password
-  )
-end
+user1 = User.create!(name: "サンプルユーザーA", email: "samlple-a@email.com", password: "password")
+user2 = User.create!(name: "サンプルユーザーB", email: "samlple-b@email.com", password: "password")
 
-puts "Users Created"
-
-admin_user = User.first
-
-50.times do |n|
-  task_name = "タスク#{n + 1}"
+3.times do |n|
+  task_name = "タスクA#{n + 1}"
   description = "タスク詳細#{n + 1}"
-  admin_user.tasks.create!(name: task_name, description: description)
+  user1.tasks.create!(name: task_name, description: description)
 end
 
-puts "Tasks Created"
+2.times do |n|
+  task_name = "タスクB#{n + 1}"
+  description = "タスク詳細#{n + 1}"
+  user2.tasks.create!(name: task_name, description: description)
+end
+
+Task.create(name: "誰のでもないタスク", description: "誰のでもないタスク詳細")
